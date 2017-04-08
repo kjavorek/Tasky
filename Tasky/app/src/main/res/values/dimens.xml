@@ -1,0 +1,14 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="taskPadding">20sp</dimen>
+    <dimen name="TaskTitleSize">20sp</dimen>
+    <dimen name="TaskDescriptionSize">12sp</dimen>
+    <dimen name="TaskPrioritySize">12sp</dimen>
+    <dimen name="text_size">16dp</dimen>
+    <dimen name="text_margin">20sp</dimen>
+    <dimen name="button_size">50dp</dimen>
+    <dimen name="right_sp_margin">5dp</dimen>
+    <dimen name="TaskAuthorSize">20dp</dimen>
+    <dimen name="TaskPageCountSize">20dp</dimen>
+</resources>

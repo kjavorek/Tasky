@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tasky</string>
+    <string name="bAddTaskText">Add</string>
+    <string name="Add">Add</string>
+    <string name="Task">Task</string>
+    <string name="Priority">Priority</string>
+    <string name="taskDescription">Description</string>
+    <string-array name="priority">
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+</resources>
