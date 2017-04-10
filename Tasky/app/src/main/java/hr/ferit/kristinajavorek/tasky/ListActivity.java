@@ -8,13 +8,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import static java.lang.String.valueOf;
 
 public class ListActivity extends AppCompatActivity {
@@ -34,7 +33,6 @@ public class ListActivity extends AppCompatActivity {
         final Adapter taskAdapter = new Adapter(tasks);
         this.lvTaskList.setAdapter(taskAdapter);
         this.bAddTask = (Button) this.findViewById(R.id.bAddTask);
-        Toast.makeText(this,"setUpUI",Toast.LENGTH_LONG).show();
         Intent newTaskIntent = this.getIntent();
         if(newTaskIntent.hasExtra(AddTaskActivity.TASK_NAME)){
             name = newTaskIntent.getStringExtra(AddTaskActivity.TASK_NAME);
@@ -43,9 +41,6 @@ public class ListActivity extends AppCompatActivity {
             if (priority.equals("High")) selectedPriority=1;
             else if (priority.equals("Medium")) selectedPriority=2;
             else selectedPriority=3;
-
-            Toast.makeText(this,"if",Toast.LENGTH_LONG).show();
-
             Task task = new Task(name,description,selectedPriority, 7);
             long id = DBHelper.getInstance(getApplicationContext()).insertTask(task);
             task.setId((int)id);

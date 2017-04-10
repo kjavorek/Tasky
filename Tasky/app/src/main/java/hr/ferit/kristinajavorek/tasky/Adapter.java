@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
 
@@ -31,7 +32,24 @@ public class Adapter extends BaseAdapter {
         Task task = this.mTasks.get(position);
         taskViewHolder.tvTaskTitle.setText(task.getTitle());
         taskViewHolder.tvTaskDescription.setText(task.getDescription());
-        taskViewHolder.tvTaskPriority.setText(String.valueOf(task.getPriority()));
+        int priority = task.getPriority();
+        switch (priority){
+            case 1:
+                taskViewHolder.ivPriority.setImageResource(R.drawable.high);
+                taskViewHolder.ivPriority.requestLayout();
+                taskViewHolder.ivPriority.getLayoutParams().height = 110;
+                taskViewHolder.ivPriority.getLayoutParams().width = 120;
+                break;
+            case 2:
+                taskViewHolder.ivPriority.setImageResource(R.drawable.medium);
+                taskViewHolder.ivPriority.requestLayout();
+                taskViewHolder.ivPriority.getLayoutParams().height = 100;
+                taskViewHolder.ivPriority.getLayoutParams().width = 90;
+                break;
+            default:
+                taskViewHolder.ivPriority.setImageResource(R.drawable.low);
+        }
+        //taskViewHolder.tvTaskPriority.setText(String.valueOf(task.getPriority()));
         return convertView;
     }
     public void insert(Task task) {
@@ -39,11 +57,13 @@ public class Adapter extends BaseAdapter {
         this.notifyDataSetChanged();
     }
     public static class ViewHolder {
-        public TextView tvTaskTitle, tvTaskDescription, tvTaskPriority;
+        public TextView tvTaskTitle, tvTaskDescription;
+        public ImageView ivPriority;
         public ViewHolder(View taskView) {
             tvTaskTitle = (TextView) taskView.findViewById(R.id.tvTaskTitle);
             tvTaskDescription = (TextView) taskView.findViewById(R.id.tvTaskDescription);
-            tvTaskPriority = (TextView) taskView.findViewById(R.id.tvTaskPriority);
+            ivPriority = (ImageView) taskView.findViewById(R.id.ivPriority);
+            //tvTaskPriority = (TextView) taskView.findViewById(R.id.tvTaskPriority);
         }
     }
     public void deleteAt(int position) {

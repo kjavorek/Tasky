@@ -1,7 +1,6 @@
 package hr.ferit.kristinajavorek.tasky;
 
 import android.util.Log;
-
 import static java.lang.String.valueOf;
 
 public class Task {

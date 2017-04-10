@@ -17,11 +17,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/TaskDescriptionSize"/>
-    <TextView
-        android:id="@+id/tvTaskPriority"
-        android:layout_below="@id/tvTaskTitle"
+    <ImageView
+        android:id="@+id/ivPriority"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
         android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/TaskPrioritySize"/>
+        android:src="@drawable/low"/>
 </RelativeLayout>

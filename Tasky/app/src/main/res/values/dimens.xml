@@ -11,4 +11,6 @@
     <dimen name="right_sp_margin">5dp</dimen>
     <dimen name="TaskAuthorSize">20dp</dimen>
     <dimen name="TaskPageCountSize">20dp</dimen>
+    <dimen name="image_width">30dp</dimen>
+    <dimen name="image_height">50dp</dimen>
 </resources>

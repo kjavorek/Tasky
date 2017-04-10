@@ -7,11 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.widget.Toast;
-
 import java.util.ArrayList;
-
 import javax.xml.validation.Schema;
-
 import static java.lang.String.valueOf;
 
 public class DBHelper extends SQLiteOpenHelper {
@@ -38,9 +35,7 @@ public class DBHelper extends SQLiteOpenHelper {
             " (" + Schema.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + Schema.DESCRIPTION +
             " TEXT," + Schema.TITLE + " TEXT," + Schema.PRIORITY + " INTEGER);";
     static final String DROP_TABLE_MY_TASKS = "DROP TABLE IF EXISTS " + Schema.TABLE_MY_TASKS;
-    static final String SELECT_ALL_TASKS = "SELECT " + Schema.DESCRIPTION + "," + Schema.TITLE + ","
-            + Schema.PRIORITY + " FROM " + Schema.TABLE_MY_TASKS;
-    static final String sel="SELECT " + Schema.DESCRIPTION + "," + Schema.TITLE + ","
+    static final String SELECT_ALL_TASKS="SELECT " + Schema.DESCRIPTION + "," + Schema.TITLE + ","
             + Schema.PRIORITY+ "," + Schema.KEY_ID + " FROM " + Schema.TABLE_MY_TASKS;
 
     public Long insertTask(Task task){
@@ -66,7 +61,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
     public ArrayList<Task> getAllTasks(){
         SQLiteDatabase writeableDatabase = this.getWritableDatabase();
-        Cursor taskCursor = writeableDatabase.rawQuery(sel,null);
+        Cursor taskCursor = writeableDatabase.rawQuery(SELECT_ALL_TASKS,null);
         ArrayList<Task> tasks = new ArrayList<>();
         if(taskCursor.moveToFirst()){
             do{
