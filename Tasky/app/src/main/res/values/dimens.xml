@@ -13,4 +13,5 @@
     <dimen name="TaskPageCountSize">20dp</dimen>
     <dimen name="image_width">30dp</dimen>
     <dimen name="image_height">50dp</dimen>
+    <dimen name="button_radius">150dp</dimen>
 </resources>

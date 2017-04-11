@@ -1,5 +1,6 @@
 package hr.ferit.kristinajavorek.tasky;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,15 +40,18 @@ public class Adapter extends BaseAdapter {
                 taskViewHolder.ivPriority.requestLayout();
                 taskViewHolder.ivPriority.getLayoutParams().height = 110;
                 taskViewHolder.ivPriority.getLayoutParams().width = 120;
+                taskViewHolder.ivPriorityLine.setBackgroundColor(Color.parseColor("#990000"));
                 break;
             case 2:
                 taskViewHolder.ivPriority.setImageResource(R.drawable.medium);
                 taskViewHolder.ivPriority.requestLayout();
                 taskViewHolder.ivPriority.getLayoutParams().height = 100;
                 taskViewHolder.ivPriority.getLayoutParams().width = 90;
+                taskViewHolder.ivPriorityLine.setBackgroundColor(Color.parseColor("#F07611"));
                 break;
             default:
                 taskViewHolder.ivPriority.setImageResource(R.drawable.low);
+                taskViewHolder.ivPriorityLine.setBackgroundColor(Color.parseColor("#429900"));
         }
         //taskViewHolder.tvTaskPriority.setText(String.valueOf(task.getPriority()));
         return convertView;
@@ -58,11 +62,12 @@ public class Adapter extends BaseAdapter {
     }
     public static class ViewHolder {
         public TextView tvTaskTitle, tvTaskDescription;
-        public ImageView ivPriority;
+        public ImageView ivPriority, ivPriorityLine;
         public ViewHolder(View taskView) {
             tvTaskTitle = (TextView) taskView.findViewById(R.id.tvTaskTitle);
             tvTaskDescription = (TextView) taskView.findViewById(R.id.tvTaskDescription);
             ivPriority = (ImageView) taskView.findViewById(R.id.ivPriority);
+            ivPriorityLine= (ImageView) taskView.findViewById(R.id.ivPriorityLine);
             //tvTaskPriority = (TextView) taskView.findViewById(R.id.tvTaskPriority);
         }
     }
