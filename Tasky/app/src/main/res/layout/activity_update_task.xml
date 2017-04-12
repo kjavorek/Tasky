@@ -1,44 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/background">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorPrimaryDark">
+    android:paddingTop="@dimen/activity_vertical_margin">
     <EditText
         android:id="@+id/etUpdateTaskName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:hint="Task"
+        android:hint="@string/enterTitle"
+        android:textSize="@dimen/title_size"
         android:textColorHint="@color/light_gray"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/item_bottom_margin"
+        android:inputType="text|textMultiLine|textCapSentences"
+        android:maxLength="@dimen/title_maxLength"
+        android:gravity="left"
+        android:maxLines="@dimen/title_maxLines"/>
     <Spinner
         android:id="@+id/updateSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/light_gray"
         android:layout_marginTop="@dimen/text_margin"
         android:layout_below="@id/etUpdateTaskName"
-        android:layout_toRightOf="@id/tvTaskPriority"/>
+        android:layout_toRightOf="@id/tvTaskPriority"
+        android:layout_marginBottom="@dimen/item_bottom_margin"/>
     <EditText
         android:id="@+id/etUpdateTaskDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:hint="Description"
+        android:hint="@string/enterDescription"
         android:textColorHint="@color/light_gray"
         android:textColor="@color/white"
-        android:layout_below="@id/updateSpinner"/>
+        android:layout_below="@id/updateSpinner"
+        android:layout_marginBottom="@dimen/item_bottom_margin"
+        android:inputType="text|textMultiLine|textCapSentences"
+        android:maxLength="@dimen/edit_maxLength"
+        android:gravity="left"
+        android:maxLines="@dimen/edit_maxLines"/>
     <Button
         android:id="@+id/bUpdate"
         android:layout_width="match_parent"
         android:layout_height="@dimen/button_size"
         android:layout_gravity="center"
-        android:text="@string/Add"
-        android:textColor="@color/white"
+        android:text="@string/Save"
+        android:textColor="@color/dark_blue"
         android:textSize="@dimen/text_size"
         android:layout_below="@id/etUpdateTaskDescription"/>
 </RelativeLayout>
+</ScrollView>

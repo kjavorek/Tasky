@@ -33,7 +33,7 @@ public class UpdateTaskActivity extends AppCompatActivity {
         this.updateSpinner = (Spinner)findViewById(R.id.updateSpinner);
         this.bUpdate = (Button) this.findViewById(R.id.bUpdate);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.priority, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.priority, android.R.layout.simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         updateSpinner.setAdapter(adapter);
 
@@ -44,6 +44,7 @@ public class UpdateTaskActivity extends AppCompatActivity {
         selectedUpdate = updateTaskIntent.getStringExtra(ListActivity.PRIORITY_UPDATE);
 
         this.etUpdateTaskName.setText(taskNameUpdate);
+        etUpdateTaskName.setSelection(etUpdateTaskName.length());
         this.etUpdateTaskDescription.setText(taskDescriptionUpdate);
         this.updateSpinner.setSelection(Integer.parseInt(selectedUpdate)-1); //0,1,2
         id=Integer.parseInt(selectedId);

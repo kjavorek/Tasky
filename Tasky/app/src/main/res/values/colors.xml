@@ -9,4 +9,5 @@
     <color name="light_gray">#888</color>
     <color name="dark_gray">#777</color>
     <color name="dark_blue">#0A2239</color>
+    <color name="transparent">#88000000</color>
 </resources>

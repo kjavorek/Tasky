@@ -2,25 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/dark_blue">
+    android:background="@drawable/background">
     <ListView
         android:id="@+id/lvTaskList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="#333"
-        android:dividerHeight="5sp">
+        android:layout_margin="@dimen/list_margin"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/divider">
     </ListView>
     <Button
         android:id="@+id/bAddTask"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="@dimen/button_layout"
+        android:layout_height="@dimen/button_layout"
         android:text="@string/bAddTaskText"
-        android:textSize="50dp"
+        android:textSize="@dimen/button_textSize"
         android:textColor="@color/dark_blue"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginRight="@dimen/button_margin"
+        android:layout_marginBottom="@dimen/button_margin"
         android:background="@drawable/roundedbutton"/>
 </RelativeLayout>

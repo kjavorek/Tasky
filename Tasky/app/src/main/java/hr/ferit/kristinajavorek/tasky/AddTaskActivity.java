@@ -39,7 +39,7 @@ public class AddTaskActivity extends AppCompatActivity {
         this.spinner = (Spinner)findViewById(R.id.spinner);
         this.bAdd = (Button) this.findViewById(R.id.bAdd);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.priority, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.priority, android.R.layout.simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
