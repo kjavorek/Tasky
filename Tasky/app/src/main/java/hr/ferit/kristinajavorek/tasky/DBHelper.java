@@ -49,6 +49,17 @@ public class DBHelper extends SQLiteOpenHelper {
         return id;
     }
 
+    public  void updateTask(int mId, String name, String description, int priority){
+        String[] id = new String[]{Integer.toString(mId)};
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Schema.TITLE, name);
+        contentValues.put(Schema.DESCRIPTION, description);
+        contentValues.put(Schema.PRIORITY, priority);
+        SQLiteDatabase writeableDatabase = this.getWritableDatabase();
+        writeableDatabase.update(Schema.TABLE_MY_TASKS,contentValues,Schema.KEY_ID+"=?",id);
+        writeableDatabase.close();
+    }
+
     public void deleteTask(int mId){
         String[] id = new String[]{Integer.toString(mId)};
         SQLiteDatabase writeableDatabase = this.getWritableDatabase();

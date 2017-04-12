@@ -17,6 +17,10 @@ import java.util.HashMap;
 import static java.lang.String.valueOf;
 
 public class ListActivity extends AppCompatActivity {
+    public static final String TASK_ID = "Id";
+    public static final String NAME_UPDATE = "Name";
+    public static final String DESCRIPTION_UPDATE = "Description";
+    public static final String PRIORITY_UPDATE = "Priority";
     ListView lvTaskList;
     Button bAddTask;
     String name, description, priority, id;
@@ -53,6 +57,20 @@ public class ListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), AddTaskActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        this.lvTaskList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent();
+                intent.setClass(getApplicationContext(), UpdateTaskActivity.class);
+                Task task = (Task)taskAdapter.getItem(position);
+                intent.putExtra(TASK_ID,valueOf(task.getId()));
+                intent.putExtra(NAME_UPDATE,task.getTitle());
+                intent.putExtra(DESCRIPTION_UPDATE,task.getDescription());
+                intent.putExtra(PRIORITY_UPDATE,valueOf(task.getPriority()));
                 startActivity(intent);
             }
         });
