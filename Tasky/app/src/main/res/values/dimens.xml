@@ -23,10 +23,6 @@
     <dimen name="item_rPadding">65dp</dimen>
     <dimen name="item_tPadding">20sp</dimen>
     <dimen name="item_rIvPadding">10dp</dimen>
-    <dimen name="title_maxLength">50</dimen>
-    <dimen name="title_maxLines">2</dimen>
-    <dimen name="edit_maxLength">165</dimen>
-    <dimen name="edit_maxLines">5</dimen>
     <dimen name="list_margin">10dp</dimen>
     <dimen name="divider">10sp</dimen>
     <dimen name="button_layout">70dp</dimen>

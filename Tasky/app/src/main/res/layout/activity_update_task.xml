@@ -20,9 +20,9 @@
         android:textColor="@color/white"
         android:layout_marginBottom="@dimen/item_bottom_margin"
         android:inputType="text|textMultiLine|textCapSentences"
-        android:maxLength="@dimen/title_maxLength"
+        android:maxLength="50"
         android:gravity="left"
-        android:maxLines="@dimen/title_maxLines"/>
+        android:maxLines="2"/>
     <Spinner
         android:id="@+id/updateSpinner"
         android:layout_width="match_parent"
@@ -42,9 +42,9 @@
         android:layout_below="@id/updateSpinner"
         android:layout_marginBottom="@dimen/item_bottom_margin"
         android:inputType="text|textMultiLine|textCapSentences"
-        android:maxLength="@dimen/edit_maxLength"
+        android:maxLength="165"
         android:gravity="left"
-        android:maxLines="@dimen/edit_maxLines"/>
+        android:maxLines="5"/>
     <Button
         android:id="@+id/bUpdate"
         android:layout_width="match_parent"

@@ -31,9 +31,9 @@
         android:textColor="@color/white"
         android:layout_marginBottom="@dimen/item_bottom_margin"
         android:inputType="text|textMultiLine|textCapSentences"
-        android:maxLength="@dimen/title_maxLength"
+        android:maxLength="50"
         android:gravity="left"
-        android:maxLines="@dimen/title_maxLines"/>
+        android:maxLines="2"/>
     <TextView
         android:id="@+id/tvTaskPriority"
         android:layout_width="wrap_content"
@@ -76,9 +76,9 @@
         android:layout_below="@id/tvTaskDescription"
         android:layout_marginBottom="@dimen/item_bottom_margin"
         android:inputType="text|textMultiLine|textCapSentences"
-        android:maxLength="@dimen/edit_maxLength"
+        android:maxLength="165"
         android:gravity="left"
-        android:maxLines="@dimen/edit_maxLines"/>
+        android:maxLines="5"/>
     <Button
         android:id="@+id/bAdd"
         android:layout_width="match_parent"
